@@ -46,7 +46,7 @@ jobs:
         # setup virtualenv step will fail.
         python:
           # Pants itself uses only 3.11
-          - {version-short: '3.11', version: '3.11.11'}
+          - {version-short: '3.11', version: '3.11.17'}
 
     services:
       mongo:
@@ -128,9 +128,9 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.10', version: '3.10.22'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
         shard:
           # Sharding of tests is handled by pants:
           # https://www.pantsbuild.org/stable/docs/using-pants/advanced-target-selection#sharding-the-input-targets
@@ -224,9 +224,9 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.10', version: '3.10.22'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
 
     services:
       mongo:
@@ -312,9 +312,9 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.10', version: '3.10.22'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
 
     services:
       mongo:
@@ -432,9 +432,9 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.10', version: '3.10.22'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
 
     services:
       mongo:
@@ -551,9 +551,9 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.10', version: '3.10.22'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
 
     services:
       mongo:
