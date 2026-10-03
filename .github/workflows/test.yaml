@@ -65,7 +65,7 @@ jobs:
 
       redis:
          # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"
@@ -156,7 +156,7 @@ jobs:
 
       redis:
          # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"
@@ -245,7 +245,7 @@ jobs:
 
       redis:
          # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"
@@ -356,7 +356,7 @@ jobs:
 
       redis:
          # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"
@@ -453,7 +453,7 @@ jobs:
 
       redis:
         # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"
@@ -572,7 +572,7 @@ jobs:
 
       redis:
          # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
          # Set health checks to wait until redis has started
         options: >-
           --name "redis"
