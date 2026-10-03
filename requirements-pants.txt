@@ -74,7 +74,7 @@ routes
 semver
 # setuptools provides pkg_resources (and we need it with pip at runtime)
 # setuptools is also required for pants to build wheels.
-setuptools==82.0.1
+setuptools==83.0.0
 simplejson
 six
 # NOTE: we use sseclient-py instead of sseclient because sseclient
@@ -92,7 +92,7 @@ tooz
 udatetime
 ujson
 # Pin virtualenv to match version installed by st2packaging-dockerfiles
-virtualenv==21.5.1
+virtualenv==21.7.13
 webob
 webtest
 # we use pip+wheel at runtime; wheel is also required for pants to build wheels.
