@@ -37,7 +37,7 @@ decorator==5.3.1
 # 202403: Bump oslo.config for py3.10 support.
 oslo.config==9.6.0
 oslo.utils==7.3.0
-paramiko==3.5.1
+paramiko==5.0.0
 # 202403: bump to 3.0.43 for py3.10 support
 prompt-toolkit==3.0.53
 pymongo==4.6.3
