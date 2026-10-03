@@ -8,7 +8,7 @@
 argcomplete==3.7.2
 cffi==2.1.1
 chardet==7.6.0
-cryptography>=41.0.5,<46
+cryptography==50.0.2
 editor==2.0.1
 importlib-metadata
 jsonpath-rw==1.4.0
@@ -16,7 +16,7 @@ jsonschema==4.26.0
 orjson==3.12.0
 prettytable==3.18.0
 prompt-toolkit==3.0.53
-pyOpenSSL<25.2
+pyOpenSSL==26.4.0
 pygments==2.21.0
 pysocks
 python-dateutil==2.9.0.post0

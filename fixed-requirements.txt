@@ -10,8 +10,7 @@ amqp==5.4.0
 apscheduler==3.11.3
 chardet==7.6.0
 cffi==2.1.1
-# range (not ==) so lockfiles_to_reqs.py won't auto-bump past pyOpenSSL's cryptography<46 ceiling
-cryptography>=41.0.5,<46
+cryptography==50.0.2
 eventlet==0.41.2
 # Note: installs gitpython==3.1.37 (security fixed) under py3.8 and gitpython==3.1.18 (latest available, vulnerable) under py3.6
 gitpython==3.2.0
@@ -44,8 +43,8 @@ pymongo==4.6.3
 pyparsing==3.3.3
 zstandard==0.25.0
 # pyOpenSSL is a candidate for removal and is not in lockfiles/st2.lock since it is not used.
-# pyOpenSSL 25.1.0 supports cryptography>=41.0.5,<46
-pyOpenSSL<25.2
+# pyOpenSSL 26.4.0 supports cryptography>=49.0.0,<51
+pyOpenSSL==26.4.0
 # 202403: switch from python-editor to editor for py3.10 support
 editor==2.0.1
 # editor dependency, required here for inclusion in st2client setup.py
