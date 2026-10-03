@@ -6,7 +6,7 @@
 # in-requirements.txt for that component and then run 'make requirements' to
 # update the component requirements.txt
 RandomWords
-amqp==5.3.1
+amqp==5.4.0
 apscheduler==3.11.3
 argcomplete==3.7.2
 backports.zoneinfo[tzdata]; python_version<"3.9"
@@ -17,12 +17,12 @@ ciso8601
 cryptography>=41.0.5,<46
 decorator==5.3.1
 dnspython
-editor==1.8.0
+editor==2.0.1
 eventlet==0.41.2
-gevent==26.8.0
+gevent==26.9.0
 gitdb==4.0.12
-gitpython==3.1.61
-greenlet==3.5.5
+gitpython==3.2.0
+greenlet==3.5.6
 gunicorn==25.3.0
 importlib-metadata
 importlib_resources==6.5.2
@@ -47,14 +47,14 @@ pyOpenSSL<25.2
 pygments==2.21.0
 pymongo==4.6.3
 pynacl==1.6.2
-pyparsing==3.3.2
+pyparsing==3.3.3
 pyrabbit
 pysocks
 pytest==9.0.3
 python-dateutil==2.9.0.post0
 python-json-logger
-python-statsd==2.1.0
-pytz==2026.3.post1
+python-statsd==3.0.0
+pytz==2026.4
 pywinrm==0.5.0
 pyyaml==6.0.3
 redis==8.1.0
@@ -62,7 +62,7 @@ referencing
 requests==2.34.2
 retrying==1.4.2
 routes==2.5.1
-semver==3.0.4
+semver==3.1.0
 setuptools==83.0.0
 simplejson
 six==1.17.0

@@ -47,6 +47,6 @@ pytest-custom_exit_code
 # zstandard is used for micro benchmarks
 zstandard==0.25.0
 # ujson is used for micro benchmarks
-ujson==5.13.0
+ujson==6.0.0
 # needed by integration tests for coordination
 redis==8.1.0
