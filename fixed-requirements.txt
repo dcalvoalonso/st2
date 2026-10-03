@@ -76,7 +76,7 @@ tooz==8.1.0
 # virtualenv==21.7.13 embeds pip==26.2.1 setuptools==84.0.0
 # lockfiles/st2.lock has pip==25.0.1 wheel==0.45.1 setuptools==75.3.2
 pip==26.2.1
-setuptools==83.0.0
+setuptools==84.0.0
 webob==1.8.11
 webtest==3.0.7
 zake==0.2.2
@@ -84,7 +84,7 @@ zake==0.2.2
 bcrypt==5.0.0
 jinja2==3.1.6
 mock==5.2.0
-pytest==9.0.3
+pytest==9.1.1
 psutil==7.2.2
 python-dateutil==2.9.0.post0
 python-statsd==3.0.0
