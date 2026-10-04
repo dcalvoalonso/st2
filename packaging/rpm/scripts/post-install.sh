@@ -8,7 +8,7 @@ set -e
 # https://docs.fedoraproject.org/en-US/packaging-guidelines/Scriptlets/#_syntax
 
 # The supported minor versions of python3 (python3.{minor}) in reverse order.
-_ST2_PY3_MINOR="11 10 9 8"
+_ST2_PY3_MINOR="11"
 
 # The default set of packs installed with st2.
 _ST2_PACKS="

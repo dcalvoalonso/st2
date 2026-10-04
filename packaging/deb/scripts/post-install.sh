@@ -30,7 +30,7 @@ set -e
 # https://stackoverflow.com/questions/15276535/dpkg-how-to-use-trigger
 
 # The supported minor versions of python3 (python3.{minor}) in reverse order.
-_ST2_PY3_MINOR="11 10 9 8"
+_ST2_PY3_MINOR="11"
 
 # The default set of packs installed with st2.
 _ST2_PACKS="
