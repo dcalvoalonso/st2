@@ -182,16 +182,18 @@ install-runners:
 	@echo ""
 	@echo "================== INSTALL RUNNERS ===================="
 	@echo ""
-	# NOTE: We use xargs to speed things up by installing runners in parallel
-	echo -e "$(COMPONENTS_RUNNERS)" | tr -d "\n" | xargs -P $(XARGS_CONCURRENCY) -d " " -n1 -i bash -c "set -x; . $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
+	# NOTE: Runners are installed one at a time. In parallel, a pip build subprocess can read the
+	# __editable__ .pth file that another install is still writing, and fail to start.
+	echo -e "$(COMPONENTS_RUNNERS)" | tr -d "\n" | xargs -P 1 -d " " -n1 -i bash -c "set -x; . $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
 
 .PHONY: install-mock-runners
 install-mock-runners:
 	@echo ""
 	@echo "================== INSTALL MOCK RUNNERS ===================="
 	@echo ""
-	# NOTE: We use xargs to speed things up by installing runners in parallel
-	echo -e "$(MOCK_RUNNERS)" | tr -d "\n" | xargs -P $(XARGS_CONCURRENCY) -d " " -n1 -i sh -c ". $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
+	# NOTE: Runners are installed one at a time. In parallel, a pip build subprocess can read the
+	# __editable__ .pth file that another install is still writing, and fail to start.
+	echo -e "$(MOCK_RUNNERS)" | tr -d "\n" | xargs -P 1 -d " " -n1 -i sh -c ". $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
 
 .PHONY: check-requirements
 .check-requirements:
