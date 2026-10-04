@@ -20,11 +20,11 @@ pyOpenSSL==26.4.0
 pygments==2.21.0
 pysocks
 python-dateutil==2.9.0.post0
-pytz==2026.4
+pytz==2026.5
 pyyaml==6.0.3
 requests==2.34.2
 six==1.17.0
 sseclient-py==1.9.0
 typing-extensions>=4.13.2; python_version < "3.11"
 urllib3==2.8.0
-zipp==4.1.0
+zipp==4.1.1
