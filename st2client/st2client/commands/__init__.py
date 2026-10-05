@@ -22,7 +22,6 @@ import logging
 
 from st2client.formatters import doc
 
-
 LOG = logging.getLogger(__name__)
 
 

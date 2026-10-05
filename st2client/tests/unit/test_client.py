@@ -29,7 +29,6 @@ from st2client.client import Client
 
 from tests import base
 
-
 LOG = logging.getLogger(__name__)
 
 NONRESOURCES = ["workflows"]

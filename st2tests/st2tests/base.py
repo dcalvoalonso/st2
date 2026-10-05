@@ -97,7 +97,6 @@ from st2tests.actions import BaseActionTestCase
 from st2tests.sensors import BaseSensorTestCase
 from st2tests.action_aliases import BaseActionAliasTestCase
 
-
 __all__ = [
     "EventletTestCase",
     "DbTestCase",

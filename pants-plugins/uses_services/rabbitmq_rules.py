@@ -154,8 +154,7 @@ async def rabbitmq_is_running(
             service_start_cmd_el_7="service rabbitmq-server start",
             service_start_cmd_el="systemctl start rabbitmq-server",
             not_installed_clause_el="this is one way to install it:",
-            install_instructions_el=dedent(
-                """\
+            install_instructions_el=dedent("""\
                 # Add key and repo for erlang and RabbitMQ
                 curl -sL https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash
                 curl -sL https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
@@ -167,26 +166,21 @@ async def rabbitmq_is_running(
                 sudo yum -y install erlang{'' if platform.distro_major_version == "7" else '-*'}
                 sudo yum -y install rabbitmq-server
                 # Don't forget to start rabbitmq-server.
-                """
-            ),
+                """),
             service_start_cmd_deb="systemctl start rabbitmq-server",
             not_installed_clause_deb="try the quick start script here:",
-            install_instructions_deb=dedent(
-                """\
+            install_instructions_deb=dedent("""\
                 https://www.rabbitmq.com/install-debian.html#apt-cloudsmith
-                """
-            ),
+                """),
             service_start_cmd_generic="systemctl start rabbitmq-server",
-            env_vars_hint=dedent(
-                """\
+            env_vars_hint=dedent("""\
                 You can also export the ST2_MESSAGING__URL env var to automatically use any
                 RabbitMQ host, local or remote, while running unit and integration tests.
                 If needed, you can also override the default exchange/queue name prefix
                 by exporting ST2_MESSAGING__PREFIX. Note that tests always add a numeric
                 suffix to the exchange/queue name prefix so that tests can safely run
                 in parallel.
-                """
-            ),
+                """),
         ),
     )
 

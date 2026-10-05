@@ -21,7 +21,6 @@ from shlex import quote
 
 import requests
 
-
 LOG = logging.getLogger(__name__)
 
 

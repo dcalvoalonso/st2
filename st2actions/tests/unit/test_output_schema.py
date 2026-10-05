@@ -39,7 +39,6 @@ from st2tests.fixtures.packs.orquesta_tests.fixture import (
     PACK_PATH as ORQUESTA_TESTS_PACK_PATH,
 )
 
-
 PACKS = [
     DUMMY_PACK_1_PATH,
     ORQUESTA_TESTS_PACK_PATH,

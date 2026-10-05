@@ -28,7 +28,6 @@ from st2auth.sso import noop
 from st2common.exceptions import auth as auth_exc
 from tests.base import FunctionalTest
 
-
 SSO_V1_PATH = "/v1/sso"
 SSO_REQUEST_V1_PATH = SSO_V1_PATH + "/request"
 SSO_CALLBACK_V1_PATH = SSO_V1_PATH + "/callback"

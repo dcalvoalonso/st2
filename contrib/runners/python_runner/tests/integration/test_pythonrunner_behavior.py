@@ -85,7 +85,7 @@ class PythonRunnerBehaviorTestCase(CleanFilesTestCase, CleanDbTestCase):
 
         # Conversely, this expects that 'mock' module file-path is not under sandbox library,
         # but the parent process's library path, because that is not under the pack's virtualenv.
-        (_, output, _) = self._run_action(
+        _, output, _ = self._run_action(
             pack_name, "get_library_path.py", {"module": "mock"}
         )
         self.assertEqual(output["result"].find(self.virtualenvs_path), -1)
@@ -93,7 +93,7 @@ class PythonRunnerBehaviorTestCase(CleanFilesTestCase, CleanDbTestCase):
         # While a module which is in the pack's virtualenv library is specified at 'module'
         # parameter of the action, this test suite expects that file-path under the parent's
         # library is returned when 'sandbox' parameter of PythonRunner is False.
-        (_, output, _) = self._run_action(
+        _, output, _ = self._run_action(
             pack_name, "get_library_path.py", {"module": "six"}, {"_sandbox": False}
         )
         self.assertEqual(output["result"].find(self.virtualenvs_path), -1)

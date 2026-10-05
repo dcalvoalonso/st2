@@ -28,7 +28,6 @@ from tooz.coordination import MemberNotJoined
 from st2common import log as logging
 from st2common.util import system_info
 
-
 LOG = logging.getLogger(__name__)
 
 COORDINATOR = None

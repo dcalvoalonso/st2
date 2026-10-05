@@ -17,5 +17,4 @@ from __future__ import absolute_import
 from st2common.policies.base import get_driver
 from st2common.policies.base import ResourcePolicyApplicator
 
-
 __all__ = ["get_driver", "ResourcePolicyApplicator"]

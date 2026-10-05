@@ -40,7 +40,6 @@ from st2client.models.core import ServiceRegistryMembersManager
 from st2client.models.core import add_auth_token_to_kwargs_from_env
 from st2client.models.core import KeyValuePairResourceManager
 
-
 LOG = logging.getLogger(__name__)
 
 # Default values for the options not explicitly specified by the user

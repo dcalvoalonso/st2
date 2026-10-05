@@ -23,7 +23,6 @@ from st2common import log as logging
 from st2common.persistence import policy as pc_db_access
 from st2common import policies as engine
 
-
 LOG = logging.getLogger(__name__)
 
 

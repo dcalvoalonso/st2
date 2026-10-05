@@ -32,7 +32,6 @@ from st2tests.fixtures.packs.core.fixture import PACK_PATH as CORE_PACK_PATH
 from st2tests.fixtures.packs.orquesta_tests.fixture import PACK_PATH as TEST_PACK_PATH
 from st2tests.mocks import liveaction as mock_lv_ac_xport
 
-
 TEST_FIXTURES = {
     "workflows": ["sequential.yaml", "join.yaml"],
     "actions": ["sequential.yaml", "join.yaml"],

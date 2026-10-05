@@ -41,7 +41,6 @@ from st2common.transport.publishers import PoolPublisher
 from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 from st2tests.fixturesloader import FixturesLoader
 
-
 # XXX: There is dependency on config being setup before importing
 # RunnerContainer. Do not move this until you fix config
 # dependencies.

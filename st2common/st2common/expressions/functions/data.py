@@ -24,7 +24,6 @@ from st2common.util import db as db_util
 from st2common.constants.meta import yaml_safe_load
 from st2common.constants.meta import yaml_safe_dump
 
-
 __all__ = [
     "from_json_string",
     "from_yaml_string",

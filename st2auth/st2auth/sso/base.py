@@ -15,7 +15,6 @@
 import abc
 import six
 
-
 __all__ = ["BaseSingleSignOnBackend"]
 
 

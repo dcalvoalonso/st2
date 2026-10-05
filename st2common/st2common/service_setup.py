@@ -58,7 +58,6 @@ from st2common.database_setup import db_setup
 from st2common.database_setup import db_teardown
 from st2common.metrics.base import metrics_initialize
 
-
 __all__ = [
     "setup",
     "teardown",
@@ -75,9 +74,7 @@ Using non utf-8 locale while working with unicode data will result in exceptions
 behavior.
 You are strongly encouraged to configure all the StackStorm services to use utf-8 encoding (e.g.
 LANG=en_US.UTF-8).
-""".strip().replace(
-    "\n", " "
-)
+""".strip().replace("\n", " ")
 
 VALID_UTF8_ENCODINGS = ["utf8", "utf-8"]
 

@@ -281,9 +281,7 @@ class WinRmBaseRunner(ActionRunner):
 $name = [System.IO.Path]::GetRandomFileName()
 $path = Join-Path $parent $name
 New-Item -ItemType Directory -Path $path | Out-Null
-$path""".format(
-            parent=parent
-        )
+$path""".format(parent=parent)
         result = self._run_ps_or_raise(
             ps, ("Unable to make temporary directory for" " powershell script")
         )
@@ -331,9 +329,7 @@ $s = @"
 "@
 $data = [System.Convert]::FromBase64String($s)
 Add-Content -value $data -encoding byte -path $filePath
-""".format(
-            dst_path=dst_path, b64_data=base64.b64encode(src_data).decode("utf-8")
-        )
+""".format(dst_path=dst_path, b64_data=base64.b64encode(src_data).decode("utf-8"))
 
         LOG.debug("WinRM uploading chunk, size = {}".format(len(ps)))
         self._run_ps_or_raise(ps, "Failed to upload chunk of powershell script")

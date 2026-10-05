@@ -28,7 +28,6 @@ from st2common.services import workflows as workflow_service
 from st2common.transport import reactor as reactor_transport
 from st2common.util import action_db as action_utils
 
-
 __all__ = ["Inquirer", "get_runner", "get_metadata"]
 
 LOG = logging.getLogger(__name__)

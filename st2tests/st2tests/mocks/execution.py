@@ -21,7 +21,6 @@ from st2common.util import concurrency
 from st2actions.notifier import notifier
 from st2common.models.db.execution import ActionExecutionDB
 
-
 __all__ = ["MockExecutionPublisher"]
 
 

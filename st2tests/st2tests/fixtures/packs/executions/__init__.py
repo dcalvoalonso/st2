@@ -20,7 +20,6 @@ import glob
 import yaml
 import six
 
-
 PATH = os.path.dirname(os.path.realpath(__file__))
 FILES = glob.glob("%s/*.yaml" % PATH)
 ARTIFACTS = {}

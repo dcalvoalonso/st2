@@ -34,7 +34,6 @@ config.register_opts(ignore_errors=True)
 from st2auth import app
 from st2auth.validation import validate_auth_backend_is_correctly_configured
 
-
 __all__ = ["main"]
 
 

@@ -15,6 +15,7 @@
 """
 Module with utility functions for purging old workflow executions.
 """
+
 from __future__ import absolute_import
 
 import copy
@@ -25,7 +26,6 @@ from mongoengine.errors import InvalidQueryError
 from st2common.constants import action as action_constants
 from st2common.persistence.workflow import WorkflowExecution
 from st2common.persistence.workflow import TaskExecution
-
 
 __all__ = ["purge_workflow_executions", "purge_task_executions"]
 

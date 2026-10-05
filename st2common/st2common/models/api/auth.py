@@ -23,7 +23,6 @@ from st2common.models.api.base import APIUIDMixin
 from st2common.models.db.auth import UserDB, TokenDB, ApiKeyDB
 from st2common import log as logging
 
-
 LOG = logging.getLogger(__name__)
 
 

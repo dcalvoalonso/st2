@@ -58,7 +58,6 @@ from common import FIXTURES_DIR
 from common import PYTEST_FIXTURE_FILE_PARAM_DECORATOR
 from common import PYTEST_FIXTURE_FILE_PARAM_NO_8MB_DECORATOR
 
-
 # Needed so we can subclass it
 LiveActionDB._meta["allow_inheritance"] = True  # pylint: disable=no-member
 
@@ -87,6 +86,7 @@ class OldJSONDictField(JSONDictField):
         """
         Serialize and encode the provided field value.
         """
+
         # Orquesta workflows support toSet() YAQL operator which returns a set which used to get
         # serialized to list by mongoengine DictField.
         #

@@ -29,7 +29,6 @@ from st2common.persistence.policy import PolicyType, Policy
 from st2common.exceptions.db import StackStormDBObjectNotFoundError
 from st2common.util import loader
 
-
 __all__ = ["PolicyRegistrar", "register_policy_types", "register_policies"]
 
 

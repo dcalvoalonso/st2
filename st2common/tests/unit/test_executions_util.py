@@ -39,7 +39,6 @@ from st2tests.fixturesloader import FixturesLoader
 
 from six.moves import range
 
-
 TEST_FIXTURES = {
     "liveactions": [
         "liveaction1.yaml",

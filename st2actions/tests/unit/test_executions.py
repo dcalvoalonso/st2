@@ -46,7 +46,6 @@ from local_runner.local_shell_command_runner import LocalShellCommandRunner
 from st2tests.fixtures.packs import executions as fixture
 from st2tests.mocks.liveaction import MockLiveActionPublisher
 
-
 MOCK_FAIL_EXECUTION_CREATE = False
 
 

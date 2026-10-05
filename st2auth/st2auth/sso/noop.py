@@ -16,7 +16,6 @@ from __future__ import absolute_import
 
 from st2auth.sso.base import BaseSingleSignOnBackend
 
-
 __all__ = ["NoOpSingleSignOnBackend"]
 
 NOT_IMPLEMENTED_MESSAGE = (

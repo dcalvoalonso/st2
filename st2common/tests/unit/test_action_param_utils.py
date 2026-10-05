@@ -33,7 +33,6 @@ from st2tests.base import DbTestCase
 from st2tests.fixtures.generic.fixture import PACK_NAME as PACK
 from st2tests.fixturesloader import FixturesLoader
 
-
 TEST_FIXTURES = {
     "actions": ["action1.yaml", "action3.yaml"],
     "runners": ["testrunner1.yaml", "testrunner3.yaml"],

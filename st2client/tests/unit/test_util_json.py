@@ -21,7 +21,6 @@ import unittest
 
 from st2client.utils import jsutil
 
-
 LOG = logging.getLogger(__name__)
 
 DOC = {

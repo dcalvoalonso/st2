@@ -23,7 +23,6 @@ from st2client.commands import resource
 from st2client.commands.action import ActionRunCommandMixin
 from st2client.formatters import table
 
-
 __all__ = ["ActionAliasBranch", "ActionAliasMatchCommand", "ActionAliasExecuteCommand"]
 
 

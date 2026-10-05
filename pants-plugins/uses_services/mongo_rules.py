@@ -210,8 +210,7 @@ async def mongo_is_running(
             service_start_cmd_el_7="service mongo start",
             service_start_cmd_el="systemctl start mongod",
             not_installed_clause_el="this is one way to install it:",
-            install_instructions_el=dedent(
-                """\
+            install_instructions_el=dedent("""\
                 # Add key and repo for the latest stable MongoDB (4.0)
                 sudo rpm --import https://www.mongodb.org/static/pgp/server-4.0.asc
                 sudo sh -c "cat <<EOT > /etc/yum.repos.d/mongodb-org-4.repo
@@ -225,19 +224,15 @@ async def mongo_is_running(
                 # Install mongo
                 sudo yum -y install mongodb-org
                 # Don't forget to start mongo.
-                """
-            ),
+                """),
             service_start_cmd_deb="systemctl start mongod",
             not_installed_clause_deb="this is one way to install it:",
-            install_instructions_deb=dedent(
-                """\
+            install_instructions_deb=dedent("""\
                 sudo apt-get install -y mongodb-org
                 # Don't forget to start mongo.
-                """
-            ),
+                """),
             service_start_cmd_generic="systemctl start mongod",
-            env_vars_hint=dedent(
-                """\
+            env_vars_hint=dedent("""\
                 You can also export the ST2_DATABASE__HOST and ST2_DATABASE__PORT
                 env vars to automatically use any MongoDB host, local or remote,
                 while running unit and integration tests. Note that you cannot
@@ -246,8 +241,7 @@ async def mongo_is_running(
                 override the default username, password, and connection timeout
                 by exporting one or more of: ST2_DATABASE__USERNAME,
                 ST2_DATABASE__PASSWORD, and ST2_DATABASE__CONNECTION_TIMEOUT.
-                """
-            ),
+                """),
         ),
     )
 

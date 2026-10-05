@@ -25,7 +25,6 @@ from st2actions.scheduler import handler as scheduler_handler
 from st2common.service_setup import db_setup
 from st2common.service_setup import db_teardown
 
-
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 LOG = logging.getLogger()
 

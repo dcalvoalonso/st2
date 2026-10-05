@@ -35,7 +35,6 @@ from st2common.util import schema as schema_utils
 from st2common.util import system_info as sys_info_utils
 from st2common.util.deep_copy import fast_deepcopy_dict
 
-
 LOG = logging.getLogger(__name__)
 
 

@@ -33,7 +33,6 @@ from st2client.commands.noop import NoopCommand
 from st2client.exceptions.operations import OperationFailureException
 from st2client.formatters import table
 
-
 LOG = logging.getLogger(__name__)
 
 

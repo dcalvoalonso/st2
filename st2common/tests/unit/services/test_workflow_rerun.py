@@ -45,7 +45,6 @@ from st2tests.fixtures.packs.core.fixture import PACK_PATH as CORE_PACK_PATH
 from st2tests.fixtures.packs.orquesta_tests.fixture import PACK_PATH as TEST_PACK_PATH
 from st2tests.mocks import liveaction as mock_lv_ac_xport
 
-
 PACKS = [TEST_PACK_PATH, CORE_PACK_PATH]
 
 RUNNER_RESULT_FAILED = (action_constants.LIVEACTION_STATUS_FAILED, {}, {})

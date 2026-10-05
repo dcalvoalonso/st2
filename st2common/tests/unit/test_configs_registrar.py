@@ -45,7 +45,6 @@ from st2tests.fixtures.packs.dummy_pack_22.fixture import (
     PACK_PATH as PACK_22_PATH,
 )
 
-
 __all__ = ["ConfigsRegistrarTestCase"]
 
 

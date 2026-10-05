@@ -33,7 +33,6 @@ from st2common.models.db.auth import UserDB, TokenDB, ApiKeyDB
 from st2common.models.api.auth import TokenAPI
 from st2common.persistence.auth import User, Token, ApiKey
 
-
 USERNAME = "".join(random.choice(string.ascii_lowercase) for i in range(10))
 TOKEN_DEFAULT_PATH = "/tokens"
 TOKEN_V1_PATH = "/v1/tokens"

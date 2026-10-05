@@ -36,7 +36,6 @@ from st2common.util import date as date_utils
 from st2common.util import action_db as action_utils
 from st2common.util import schema as util_schema
 
-
 __all__ = [
     "request",
     "create_request",

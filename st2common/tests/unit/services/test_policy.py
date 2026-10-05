@@ -31,7 +31,6 @@ from st2common.services import policies as policy_service
 from st2tests.fixtures.generic.fixture import PACK_NAME as PACK
 from st2tests import fixturesloader as fixtures
 
-
 TEST_FIXTURES = {
     "actions": [
         "action1.yaml",  # wolfpack.action-1

@@ -25,7 +25,6 @@ from st2common.util import date as date_utils
 
 from st2tests import DbTestCase
 
-
 INQUIRY_RESULT = {
     "users": [],
     "roles": [],

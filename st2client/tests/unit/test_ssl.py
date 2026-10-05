@@ -24,7 +24,6 @@ import logging
 from tests import base
 from st2client import shell
 
-
 LOG = logging.getLogger(__name__)
 
 USERNAME = "stanley"

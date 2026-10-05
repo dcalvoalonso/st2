@@ -27,7 +27,6 @@ from st2common.util import api as api_utils
 from st2common import log as logging
 import st2auth.handlers as handlers
 
-
 HANDLER_MAPPINGS = {
     "proxy": handlers.ProxyAuthHandler,
     "standalone": handlers.StandaloneAuthHandler,

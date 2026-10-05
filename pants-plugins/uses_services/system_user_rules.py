@@ -134,8 +134,7 @@ async def has_system_user(
     raise ServiceMissingError(
         service="system_user",
         platform=platform,
-        msg=dedent(
-            f"""\
+        msg=dedent(f"""\
             The system_user ({request.system_user}) does not seem to be present!
 
             Please export the ST2TESTS_SYSTEM_USER env var to specify which user
@@ -145,8 +144,7 @@ async def has_system_user(
             To use your current user ({current_user}) as the system_user, run:
 
             export ST2TESTS_SYSTEM_USER=$(id -un)
-            """
-        ),
+            """),
     )
 
 

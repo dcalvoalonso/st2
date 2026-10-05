@@ -21,7 +21,6 @@ from st2common.persistence import action as action_access
 from st2common.policies.concurrency import BaseConcurrencyApplicator
 from st2common.services import action as action_service
 
-
 __all__ = ["ConcurrencyApplicator"]
 
 LOG = logging.getLogger(__name__)

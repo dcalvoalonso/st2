@@ -19,7 +19,6 @@ import six
 from st2common import log as logging
 from st2common.persistence.rule import Rule
 
-
 LOG = logging.getLogger(__name__)
 
 __all__ = ["get_rules_given_trigger", "get_rules_with_trigger_ref"]

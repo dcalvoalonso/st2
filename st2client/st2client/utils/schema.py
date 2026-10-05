@@ -15,7 +15,6 @@
 #
 import sys
 
-
 TYPE_TABLE = {
     dict: "object",
     list: "array",

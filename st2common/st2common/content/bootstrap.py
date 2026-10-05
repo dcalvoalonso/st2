@@ -205,7 +205,7 @@ def register_sensors():
         LOG.info("############## Registering sensors ######################")
         LOG.info("=========================================================")
         with Timer(key="st2.register.sensors"):
-            (registered_count, overridden_count) = sensors_registrar.register_sensors(
+            registered_count, overridden_count = sensors_registrar.register_sensors(
                 pack_dir=pack_dir, fail_on_failure=fail_on_failure
             )
     except Exception as e:

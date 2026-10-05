@@ -36,7 +36,6 @@ from st2common.util import action_db as action_utils
 from st2common.util import date as date_utils
 from st2tests.fixtures.packs.core.fixture import PACK_PATH as CORE_PACK_PATH
 
-
 PACKS = [CORE_PACK_PATH]
 
 

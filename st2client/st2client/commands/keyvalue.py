@@ -130,11 +130,8 @@ class KeyValuePairListCommand(resource.ResourceTableCommand):
             type=int,
             dest="last",
             default=self.default_limit,
-            help=(
-                "List N most recent %s. Use -n -1 to fetch the full result \
-                                       set."
-                % self.resource_name
-            ),
+            help=("List N most recent %s. Use -n -1 to fetch the full result \
+                                       set." % self.resource_name),
         )
 
     @resource.add_auth_token_to_kwargs_from_cli

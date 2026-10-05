@@ -51,7 +51,6 @@ from st2common.models.db.workflow import WorkflowExecutionDB
 from st2common.models.db.workflow import TaskExecutionDB
 from st2common.models.db.execution_queue import ActionExecutionSchedulingQueueItemDB
 
-
 PACKS = [TEST_PACK_PATH, CORE_PACK_PATH]
 
 RUNNER_RESULT_FAILED = (

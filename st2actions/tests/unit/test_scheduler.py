@@ -42,7 +42,6 @@ from st2common.persistence.liveaction import LiveAction
 from st2common.services import executions as execution_service
 from st2common.exceptions import db as db_exc
 
-
 LIVE_ACTION = {
     "parameters": {
         "cmd": 'echo ":dat_face:"',

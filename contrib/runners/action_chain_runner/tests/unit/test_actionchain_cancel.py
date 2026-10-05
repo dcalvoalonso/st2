@@ -44,7 +44,6 @@ from st2tests.fixtures.packs.core.fixture import PACK_PATH as CORE_PACK_PATH
 from st2tests.mocks.liveaction import MockLiveActionPublisherNonBlocking
 from six.moves import range
 
-
 TEST_FIXTURES = {
     "chains": ["test_cancel.yaml", "test_cancel_with_subworkflow.yaml"],
     "actions": ["test_cancel.yaml", "test_cancel_with_subworkflow.yaml"],

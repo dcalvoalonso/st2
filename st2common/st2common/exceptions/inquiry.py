@@ -18,7 +18,6 @@ from __future__ import absolute_import
 from st2common import exceptions as st2_exc
 from st2common import log as logging
 
-
 LOG = logging.getLogger(__name__)
 
 

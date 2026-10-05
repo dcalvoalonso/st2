@@ -25,7 +25,6 @@ from st2tests import DbTestCase
 
 from tests.unit.base import BaseDBModelCRUDTestCase
 
-
 __all__ = ["UserDBModelCRUDTestCase"]
 
 

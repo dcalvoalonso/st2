@@ -25,7 +25,6 @@ from st2common.models.api.action import RunnerTypeAPI, ActionAPI
 from st2common.models.db.execution import ActionExecutionDB
 from st2common import log as logging
 
-
 LOG = logging.getLogger(__name__)
 
 REQUIRED_ATTR_SCHEMAS = {

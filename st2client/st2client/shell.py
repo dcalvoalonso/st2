@@ -85,17 +85,13 @@ For example:
     %(prog)s --debug run core.local cmd=date
 """.strip()
 
-NON_UTF8_LOCALE = (
-    """
+NON_UTF8_LOCALE = """
 Locale %s with encoding %s which is not UTF-8 is used. This means that some functionality which
 relies on outputting unicode characters won't work.
 
 You are encouraged to use UTF-8 locale by setting LC_ALL environment variable to en_US.UTF-8 or
 similar.
-""".strip()
-    .replace("\n", " ")
-    .replace("  ", " ")
-)
+""".strip().replace("\n", " ").replace("  ", " ")
 
 PACKAGE_METADATA_FILE_PATH = "/opt/stackstorm/st2/package.meta"
 

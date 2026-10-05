@@ -48,7 +48,6 @@ from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 from st2tests.fixturesloader import FixturesLoader
 from st2tests.api import FunctionalTest
 
-
 ACTION_1 = {
     "name": "st2.dummy.action1",
     "description": "test description",

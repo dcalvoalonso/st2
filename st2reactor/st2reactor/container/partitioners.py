@@ -25,7 +25,6 @@ from st2common.exceptions.sensors import (
 from st2common.persistence.keyvalue import KeyValuePair
 from st2common.persistence.sensor import SensorType
 
-
 __all__ = [
     "get_all_enabled_sensors",
     "DefaultPartitioner",

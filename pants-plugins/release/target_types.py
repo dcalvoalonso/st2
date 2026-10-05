@@ -32,8 +32,7 @@ class DistroIDField(StringField):
         "el9",
     )
     required = True
-    help = help_text(
-        """
+    help = help_text("""
         The package distribution and version.
 
         This is an internal StackStorm field used by pants-plugins/release.
@@ -41,8 +40,7 @@ class DistroIDField(StringField):
         These examples show how the distro_id gets translated into packagecloud values:
           - distro_id "el8" is distro "el" with version "8";
           - distro_id "focal" is distro "ubuntu" with version "focal".
-        """
-    )
+        """)
 
 
 def rules():

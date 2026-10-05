@@ -33,7 +33,6 @@ from st2tests.fixtures.packs.pack_invalid_requirements.fixture import (
     PACK_NAME as PACK_INVALID_REQUIREMENTS,
 )
 
-
 __all__ = ["VirtualenvUtilsTestCase"]
 
 

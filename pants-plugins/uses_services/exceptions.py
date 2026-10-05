@@ -77,24 +77,21 @@ class ServiceMissingError(Exception):
             install_instructions = messages.install_instructions_deb
 
         if supported:
-            instructions = dedent(
-                f"""\
+            instructions = dedent(f"""\
                 If {service} is installed, but not running try:
 
                 {service_start_cmd}
 
                 If {service} is not installed, {not_installed_clause}:
 
-                """
-            ).format(
+                """).format(
                 service=service,
                 service_start_cmd=service_start_cmd,
                 not_installed_clause=not_installed_clause,
             )
             instructions += install_instructions
         elif platform.os == "Linux":
-            instructions = dedent(
-                f"""\
+            instructions = dedent(f"""\
                 You are on Linux using {platform.distro_name}, which is not
                 one of our generally supported distributions. We recommend
                 you use vagrant for local development with something like:
@@ -124,11 +121,9 @@ class ServiceMissingError(Exception):
                 Distro Version: {platform.distro_version}
 
                 Thanks and Good Luck!
-                """
-            )
+                """)
         elif platform.os == "Darwin":  # MacOS
-            instructions = dedent(
-                f"""\
+            instructions = dedent(f"""\
                 You are on Mac OS. Generally we recommend using vagrant for local
                 development on Mac OS with something like:
 
@@ -142,11 +137,9 @@ class ServiceMissingError(Exception):
                 you may run into some speed bumps. Other StackStorm developers have
                 been known to use Mac OS for development, so feel free to ask for
                 help in slack. At a minimum you need to install and start {service}.
-                """
-            )
+                """)
         else:
-            instructions = dedent(
-                f"""\
+            instructions = dedent(f"""\
                 You are not on Linux. In this case we recommend using vagrant
                 for local development with something like:
 
@@ -161,8 +154,7 @@ class ServiceMissingError(Exception):
                 and start {service}. Good luck!
 
                 Detected OS: {platform.os}
-                """
-            )
+                """)
 
         if messages.env_vars_hint:
             instructions += f"\n\n{messages.env_vars_hint}"

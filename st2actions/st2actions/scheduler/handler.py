@@ -38,7 +38,6 @@ from st2common.util import concurrency
 from st2common.metrics import base as metrics
 from st2common.exceptions import db as db_exc
 
-
 __all__ = ["ActionExecutionSchedulingQueueHandler", "get_handler"]
 
 

@@ -32,7 +32,6 @@ import subprocess
 import traceback
 import yaml
 
-
 PRINT = pprint.pprint
 YAML_HEADER = "---"
 

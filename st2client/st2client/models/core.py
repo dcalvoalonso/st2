@@ -30,7 +30,6 @@ import requests
 
 from st2client.utils import httpclient
 
-
 LOG = logging.getLogger(__name__)
 
 

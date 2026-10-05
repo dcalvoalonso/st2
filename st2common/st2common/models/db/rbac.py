@@ -19,7 +19,6 @@ import mongoengine as me
 from st2common.models.db import MongoDBAccess
 from st2common.models.db import stormbase
 
-
 __all__ = [
     "RoleDB",
     "UserRoleAssignmentDB",

@@ -37,7 +37,6 @@ from st2common.util import action_db
 from st2tests import DbTestCase
 from six.moves import range
 
-
 RUNNER = {
     "name": "local-shell-script",
     "description": "A runner to execute local command.",
@@ -641,7 +640,7 @@ class TestActionExecutionService(DbTestCase):
         liveaction = LiveActionDB(action=ACTION_REF, parameters=parameters)
 
         # Validate that if skip validation that no exception raised
-        (action, execution) = action_service.create_request(
+        action, execution = action_service.create_request(
             liveaction, validate_params=False
         )
         self.assertTrue(action)

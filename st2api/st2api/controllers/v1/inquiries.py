@@ -33,7 +33,6 @@ from st2common import router as api_router
 from st2common.services import inquiry as inquiry_service
 from st2common.util.jsonify import json_decode
 
-
 __all__ = ["InquiriesController"]
 
 LOG = logging.getLogger(__name__)

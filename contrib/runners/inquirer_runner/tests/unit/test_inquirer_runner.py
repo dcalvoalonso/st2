@@ -26,7 +26,6 @@ from st2common.transport import reactor as reactor_transport
 from st2common.util import action_db as action_utils
 from st2tests import base as st2tests
 
-
 mock_exc_get = mock.Mock()
 mock_exc_get.id = "abcdef"
 
@@ -81,7 +80,7 @@ class InquiryTestCase(st2tests.RunnerTestCase):
         mock_inquiry_liveaction_db.context = {"parent": test_parent.id}
         runner.liveaction = mock_inquiry_liveaction_db
 
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, action_constants.LIVEACTION_STATUS_PENDING)
         self.assertEqual(
@@ -112,7 +111,7 @@ class InquiryTestCase(st2tests.RunnerTestCase):
         runner.runner_parameters = runner_params
         runner.pre_run()
         mock_inquiry_liveaction_db.context = {"parent": None}
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
         self.assertEqual(status, action_constants.LIVEACTION_STATUS_PENDING)
         self.assertEqual(
             output,

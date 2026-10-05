@@ -52,7 +52,6 @@ from st2tests.fixtures.packs.orquesta_tests.fixture import (
 from st2tests.mocks import liveaction as mock_lv_ac_xport
 from st2tests.mocks import workflow as mock_wf_ex_xport
 
-
 PACKS = [TEST_PACK_PATH, CORE_PACK_PATH]
 
 RUNNER_RESULT_FAILED = (ac_const.LIVEACTION_STATUS_FAILED, {"stderror": "..."}, {})

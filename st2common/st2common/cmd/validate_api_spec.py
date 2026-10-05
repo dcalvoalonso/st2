@@ -32,7 +32,6 @@ from st2common.script_setup import setup as common_setup
 from st2common.script_setup import teardown as common_teardown
 import six
 
-
 __all__ = ["main"]
 
 
@@ -69,7 +68,7 @@ def _validate_definitions(spec):
     error = False
     verbose = cfg.CONF.verbose
 
-    for (model, definition) in six.iteritems(defs):
+    for model, definition in six.iteritems(defs):
         api_model = definition.get("x-api-model", None)
 
         if not api_model:

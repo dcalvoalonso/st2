@@ -24,7 +24,6 @@ from fixate_requirements import (
     write_requirements,
 )
 
-
 LOG = logging.getLogger(__name__)
 
 

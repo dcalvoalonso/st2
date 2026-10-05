@@ -52,7 +52,6 @@ from st2reactor.sensor import config
 from st2common.services.datastore import SensorDatastoreService
 from st2common.util.monkey_patch import use_select_poll_workaround
 
-
 LOG = logging.getLogger(__name__)
 
 __all__ = ["SensorWrapper", "SensorService"]

@@ -20,7 +20,6 @@ import mock
 from st2common.models.db.actionalias import ActionAliasDB
 import st2common.util.actionalias_matching as matching
 
-
 MemoryActionAliasDB = ActionAliasDB
 
 

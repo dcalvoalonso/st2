@@ -38,7 +38,6 @@ from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 from st2tests.fixturesloader import FixturesLoader
 import st2actions.worker as actions_worker
 
-
 TEST_FIXTURES = {"actions": ["local.yaml"]}
 
 

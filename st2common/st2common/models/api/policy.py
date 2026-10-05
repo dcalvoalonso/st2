@@ -21,7 +21,6 @@ from st2common.models.db.policy import PolicyTypeDB, PolicyDB
 from st2common import log as logging
 from st2common.util import schema as util_schema
 
-
 __all__ = ["PolicyTypeAPI"]
 
 LOG = logging.getLogger(__name__)

@@ -29,7 +29,6 @@ from st2client import formatters
 from st2client.utils import strutil
 from st2client.utils.terminal import get_terminal_size_columns
 
-
 LOG = logging.getLogger(__name__)
 
 # Minimum width for the ID to make sure the ID column doesn't wrap across

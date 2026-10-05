@@ -25,7 +25,6 @@ from oslo_config import cfg
 from st2common.constants.action import ACTION_OUTPUT_RESULT_DELIMITER
 from st2common import log as logging
 
-
 __all__ = [
     "PackConfigDict",
     "get_logger_for_python_runner_action",

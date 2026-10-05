@@ -23,7 +23,6 @@ from orquesta.expressions.functions import workflow as workflow_functions
 
 from st2common.persistence import workflow as wf_db_access
 
-
 LOG = logging.getLogger(__name__)
 
 

@@ -39,9 +39,7 @@ __all__ = [
 INVALID_FILE_PATH_ERROR = """
 Invalid file path: "%s". File path needs to be relative to the pack%sdirectory (%s).
 For example "my_%s.py".
-""".strip().replace(
-    "\n", " "
-)
+""".strip().replace("\n", " ")
 
 # Cache which stores pack name -> pack base path mappings
 PACK_NAME_TO_BASE_PATH_CACHE = {}

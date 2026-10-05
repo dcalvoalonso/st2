@@ -20,7 +20,6 @@ import logging
 from st2common.models.db.executionstate import ActionExecutionStateDB
 from st2common.persistence.executionstate import ActionExecutionState
 
-
 LOG = logging.getLogger(__name__)
 
 

@@ -51,6 +51,7 @@ At this point, we have the schema, so then we:
 Now, we return because Pylint can finally understand our API model objects without
 importing them.
 """
+
 # pylint: disable=E1120,E1125
 
 import astroid

@@ -41,7 +41,6 @@ from st2common.util import concurrency
 from st2common.util import system_info
 from st2common.transport import queues
 
-
 __all__ = ["ActionExecutionDispatcher", "get_worker"]
 
 

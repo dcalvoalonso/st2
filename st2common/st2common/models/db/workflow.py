@@ -24,7 +24,6 @@ from st2common.models.db import stormbase
 from st2common.fields import JSONDictEscapedFieldCompatibilityField
 from st2common.util import date as date_utils
 
-
 __all__ = ["WorkflowExecutionDB", "TaskExecutionDB"]
 
 

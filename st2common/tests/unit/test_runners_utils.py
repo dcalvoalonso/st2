@@ -26,7 +26,6 @@ from st2common.util import action_db as action_db_utils
 from st2tests import fixturesloader
 from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 
-
 TEST_FIXTURES = {
     "liveactions": ["liveaction1.yaml"],
     "actions": ["local.yaml"],
