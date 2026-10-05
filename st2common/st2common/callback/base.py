@@ -19,7 +19,6 @@ import six
 
 from st2common import log as logging
 
-
 __all__ = [
     "AsyncActionExecutionCallbackHandler",
 ]

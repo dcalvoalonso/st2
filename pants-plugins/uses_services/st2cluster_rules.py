@@ -154,8 +154,7 @@ async def st2cluster_is_running(
         return St2ClusterIsRunning()
 
     # st2cluster is not running, so raise an error with instructions.
-    instructions = dedent(
-        """\
+    instructions = dedent("""\
         A full StackStorm cluster is required to run some integration tests.
         To start the dev StackStorm cluster, run this from the repo root
         (probably in a new terminal/window, as the output is quite verbose):
@@ -173,8 +172,7 @@ async def st2cluster_is_running(
         vagrant ssh
 
         Please see: https://docs.stackstorm.com/install/vagrant.html
-        """
-    )
+        """)
     raise ServiceMissingError(
         service="st2cluster",
         platform=platform,

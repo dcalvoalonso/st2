@@ -19,7 +19,6 @@ from st2common.models.api.base import BaseAPI
 from st2common.models.api.base import APIUIDMixin
 from st2common.models.db.trace import TraceDB, TraceComponentDB
 
-
 TraceComponentAPISchema = {
     "type": "object",
     "properties": {

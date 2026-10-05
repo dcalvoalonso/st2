@@ -32,7 +32,6 @@ from st2client.exceptions.operations import OperationFailureException
 import st2client.utils.terminal as term
 from st2client.utils import interactive
 
-
 LIVEACTION_STATUS_REQUESTED = "requested"
 LIVEACTION_STATUS_SCHEDULED = "scheduled"
 LIVEACTION_STATUS_DELAYED = "delayed"

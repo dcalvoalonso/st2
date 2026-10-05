@@ -974,11 +974,8 @@ class ActionExecutionsController(
             )
 
         if liveaction_db.status == action_constants.LIVEACTION_STATUS_CANCELED:
-            LOG.info(
-                'Action %s already in "canceled" state; \
-                returning execution object.'
-                % liveaction_db.id
-            )
+            LOG.info('Action %s already in "canceled" state; \
+                returning execution object.' % liveaction_db.id)
             return execution_api
 
         if liveaction_db.status not in action_constants.LIVEACTION_CANCELABLE_STATES:
@@ -988,7 +985,7 @@ class ActionExecutionsController(
             )
 
         try:
-            (liveaction_db, execution_db) = action_service.request_cancellation(
+            liveaction_db, execution_db = action_service.request_cancellation(
                 liveaction_db, requester_user.name or cfg.CONF.system_user.user
             )
         except:

@@ -44,7 +44,6 @@ from st2tests.mocks.execution import MockExecutionPublisher
 from st2tests.mocks.liveaction import MockLiveActionPublisherSchedulingQueueOnly
 from st2tests.mocks.runners import runner
 
-
 __all__ = ["ConcurrencyPolicyTestCase"]
 
 TEST_FIXTURES = {

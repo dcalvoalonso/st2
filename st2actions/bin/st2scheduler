@@ -17,6 +17,5 @@
 import sys
 from st2actions.cmd import scheduler
 
-
 if __name__ == "__main__":
     sys.exit(scheduler.main())

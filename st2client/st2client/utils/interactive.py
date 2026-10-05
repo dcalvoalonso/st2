@@ -27,7 +27,6 @@ from prompt_toolkit import validation
 from st2client.exceptions.operations import OperationFailureException
 from six.moves import range
 
-
 POSITIVE_BOOLEAN = {"1", "y", "yes", "true"}
 NEGATIVE_BOOLEAN = {"0", "n", "no", "nope", "nah", "false"}
 

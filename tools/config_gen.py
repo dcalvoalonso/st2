@@ -25,7 +25,6 @@ import traceback
 from collections import OrderedDict
 from oslo_config import cfg
 
-
 CONFIGS = [
     # pants uses these strings to infer dependencies. Compare this list
     # with the output of this command to make sure everything is present:

@@ -20,7 +20,6 @@ from st2common.models import db
 from st2common.models.db import workflow as wf_db_models
 from st2common.persistence import base as persistence
 
-
 __all__ = ["WorkflowExecution", "TaskExecution"]
 
 

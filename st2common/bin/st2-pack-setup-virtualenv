@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-""""
+""" "
 StackStorm command which downloads the pack and places it in the local content
 repository.
 """

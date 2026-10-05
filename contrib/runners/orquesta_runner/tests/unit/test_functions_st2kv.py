@@ -37,7 +37,6 @@ from st2common.persistence import keyvalue as kvp_db_access
 from st2common.util import crypto
 from st2common.util import keyvalue as kvp_util
 
-
 MOCK_CTX = {"__vars": {"st2": {"user": "stanley"}}}
 MOCK_CTX_NO_USER = {"__vars": {"st2": {}}}
 

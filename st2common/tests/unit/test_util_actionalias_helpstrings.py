@@ -20,7 +20,6 @@ import mock
 from st2common.models.db.actionalias import ActionAliasDB
 from st2common.util.actionalias_helpstring import generate_helpstring_result
 
-
 MemoryActionAliasDB = ActionAliasDB
 
 

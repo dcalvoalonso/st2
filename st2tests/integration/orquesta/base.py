@@ -30,7 +30,6 @@ from st2client import client as st2
 from st2client import models
 from st2common.constants import action as action_constants
 
-
 LIVEACTION_LAUNCHED_STATUSES = [
     action_constants.LIVEACTION_STATUS_REQUESTED,
     action_constants.LIVEACTION_STATUS_SCHEDULED,

@@ -32,7 +32,6 @@ from st2common.constants.action import LIBS_DIR as ACTION_LIBS_DIR
 from st2common.constants.pack import SYSTEM_PACK_NAMES
 from st2common.content.utils import get_pack_base_path
 
-
 __all__ = [
     "get_site_packages_dir",
     "get_virtualenv_lib_path",

@@ -68,8 +68,8 @@ ST2TESTS_REDIS_PORT := 6379
 
 # Pin common pip version here across all the targets
 # Note! Periodic maintenance pip upgrades are required to be up-to-date with the latest pip security fixes and updates
-PIP_VERSION ?= 26.1.2
-SETUPTOOLS_VERSION ?= 82.0.1
+PIP_VERSION ?= 26.2.1
+SETUPTOOLS_VERSION ?= 84.0.0
 PIP_OPTIONS := $(ST2_PIP_OPTIONS)
 
 ifndef PYLINT_CONCURRENCY
@@ -182,16 +182,18 @@ install-runners:
 	@echo ""
 	@echo "================== INSTALL RUNNERS ===================="
 	@echo ""
-	# NOTE: We use xargs to speed things up by installing runners in parallel
-	echo -e "$(COMPONENTS_RUNNERS)" | tr -d "\n" | xargs -P $(XARGS_CONCURRENCY) -d " " -n1 -i bash -c "set -x; . $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
+	# NOTE: Runners are installed one at a time. In parallel, a pip build subprocess can read the
+	# __editable__ .pth file that another install is still writing, and fail to start.
+	echo -e "$(COMPONENTS_RUNNERS)" | tr -d "\n" | xargs -P 1 -d " " -n1 -i bash -c "set -x; . $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
 
 .PHONY: install-mock-runners
 install-mock-runners:
 	@echo ""
 	@echo "================== INSTALL MOCK RUNNERS ===================="
 	@echo ""
-	# NOTE: We use xargs to speed things up by installing runners in parallel
-	echo -e "$(MOCK_RUNNERS)" | tr -d "\n" | xargs -P $(XARGS_CONCURRENCY) -d " " -n1 -i sh -c ". $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
+	# NOTE: Runners are installed one at a time. In parallel, a pip build subprocess can read the
+	# __editable__ .pth file that another install is still writing, and fail to start.
+	echo -e "$(MOCK_RUNNERS)" | tr -d "\n" | xargs -P 1 -d " " -n1 -i sh -c ". $(VIRTUALENV_DIR)/bin/activate; cd $$(pwd)/{} ; $(PYBIN) -m pip install --editable . --no-deps"
 
 .PHONY: check-requirements
 .check-requirements:

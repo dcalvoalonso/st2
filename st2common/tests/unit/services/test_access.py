@@ -27,7 +27,6 @@ from st2common.services import access
 from st2common.exceptions.auth import TTLTooLargeException
 import st2tests.config as tests_config
 
-
 USERNAME = "manas"
 
 

@@ -53,7 +53,6 @@ from st2tests.fixtures.packs.test_content_version_fixture.fixture import (
 from st2tests.fixturesloader import assert_submodules_are_checked_out
 import st2tests.base as tests_base
 
-
 PASCAL_ROW_ACTION_PATH = os.path.join(
     tests_base.get_resources_path(), "packs", "pythonactions/actions/pascal_row.py"
 )
@@ -130,7 +129,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = NON_SIMPLE_TYPE_ACTION
         runner.pre_run()
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
@@ -153,7 +152,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 5})
+        status, output, _ = runner.run({"row_index": 5})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 5, 10, 10, 5, 1])
@@ -162,7 +161,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "b"})
+        status, output, _ = runner.run({"row_index": "b"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["exit_code"], 0)
@@ -174,7 +173,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {python_runner.RUNNER_TIMEOUT: timeout}
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 4})
+        status, output, _ = runner.run({"row_index": 4})
         self.assertEqual(status, LIVEACTION_STATUS_TIMED_OUT)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], "None")
@@ -185,7 +184,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 4})
+        status, output, _ = runner.run({"row_index": 4})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 4, 6, 4, 1])
@@ -194,7 +193,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "a"})
+        status, output, _ = runner.run({"row_index": "a"})
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], "This is suppose to fail don't worry!!")
@@ -205,7 +204,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "complex_type"})
+        status, output, _ = runner.run({"row_index": "complex_type"})
 
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
         self.assertIsNotNone(output)
@@ -215,7 +214,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "c"})
+        status, output, _ = runner.run({"row_index": "c"})
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], None)
@@ -230,7 +229,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "e"})
+        status, output, _ = runner.run({"row_index": "e"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 2])
@@ -269,7 +268,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, result, _) = runner.run({"row_index": "4"})
+        status, result, _ = runner.run({"row_index": "4"})
         self.assertIsNotNone(result)
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
 
@@ -277,7 +276,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = "foo.py"
         runner.pre_run()
-        (status, result, _) = runner.run({})
+        status, result, _ = runner.run({})
         self.assertIsNotNone(result)
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
 
@@ -300,7 +299,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {"env": env_vars}
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, _, _) = runner.run({"row_index": 4})
+        _, _, _ = runner.run({"row_index": 4})
 
         _, call_kwargs = mock_popen.call_args
         actual_env = call_kwargs["env"]
@@ -347,7 +346,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, output, _) = runner.run({"row_index": 4})
+        _, output, _ = runner.run({"row_index": 4})
 
         self.assertMultiLineEqual(
             output["stdout"], "pre result line 1\npost result line 1"
@@ -379,7 +378,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         )
 
         runner.pre_run()
-        (_, output, _) = runner.run({"row_index": 4})
+        _, output, _ = runner.run({"row_index": 4})
 
         self.assertMultiLineEqual(
             output["stdout"], "pre result line 1\npost result line 1"
@@ -429,7 +428,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, output, _) = runner.run({"row_index": 4})
+        _, output, _ = runner.run({"row_index": 4})
 
         self.assertMultiLineEqual(
             output["stdout"], "pre result line 1\npre result line 2\npost result line 1"
@@ -474,7 +473,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
             runner = self._get_mock_runner_obj()
             runner.entry_point = PRINT_TO_STDOUT_STDERR_ACTION
             runner.pre_run()
-            (_, output, _) = runner.run({"stdout_count": 2, "stderr_count": 2})
+            _, output, _ = runner.run({"stdout_count": 2, "stderr_count": 2})
 
             # assertMultiLineEqual displays a diff if the two don't match
             self.assertMultiLineEqual(
@@ -514,7 +513,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, output, _) = runner.run({"row_index": 4})
+        _, output, _ = runner.run({"row_index": 4})
 
         self.assertEqual(output["stdout"], "")
         self.assertEqual(output["stderr"], mock_stderr[0])
@@ -540,7 +539,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 4})
+        status, output, _ = runner.run({"row_index": 4})
 
         self.assertEqual(output["stdout"], "pre resultpost result")
         self.assertEqual(output["stderr"], mock_stderr[0])
@@ -567,7 +566,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 4})
+        status, output, _ = runner.run({"row_index": 4})
 
         self.assertEqual(output["stdout"], "pre resultpost result")
         self.assertEqual(output["stderr"], mock_stderr[0])
@@ -586,7 +585,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.auth_token.token = "ponies"
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, _, _) = runner.run({"row_index": 4})
+        _, _, _ = runner.run({"row_index": 4})
 
         _, call_kwargs = mock_popen.call_args
         actual_env = call_kwargs["env"]
@@ -604,7 +603,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.auth_token.token = "ponies"
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, _, _) = runner.run({"row_index": 4})
+        _, _, _ = runner.run({"row_index": 4})
 
         _, call_kwargs = mock_popen.call_args
         actual_env = call_kwargs["env"]
@@ -626,7 +625,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.auth_token.token = "ponies"
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (_, _, _) = runner.run({"row_index": 4})
+        _, _, _ = runner.run({"row_index": 4})
 
         _, call_kwargs = mock_popen.call_args
         actual_env = call_kwargs["env"]
@@ -687,7 +686,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = TEST_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], "test action")
@@ -698,7 +697,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PATHS_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
@@ -771,7 +770,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "e"})
+        status, output, _ = runner.run({"row_index": "e"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 2])
@@ -810,7 +809,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.runner_parameters = {"log_level": "info"}
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "e"})
+        status, output, _ = runner.run({"row_index": "e"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 2])
@@ -824,7 +823,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.runner_parameters = {"log_level": "error"}
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "e"})
+        status, output, _ = runner.run({"row_index": "e"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 2])
@@ -842,7 +841,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.runner_parameters = {}
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "e"})
+        status, output, _ = runner.run({"row_index": "e"})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"], [1, 2])
@@ -856,7 +855,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": "f"})
+        status, output, _ = runner.run({"row_index": "f"})
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
         self.assertIsNotNone(output)
 
@@ -874,7 +873,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.entry_point = ECHOER_ACTION_PATH
         runner.pre_run()
         large_value = "".join(["1" for _ in range(MAX_PARAM_LENGTH)])
-        (status, output, _) = runner.run({"action_input": large_value})
+        status, output, _ = runner.run({"action_input": large_value})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"]["action_input"], large_value)
@@ -888,7 +887,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         # not just the value portion. So we need to subtract the remaining
         # overhead from the initial padding.
         large_value = "".join(["1" for _ in range(MAX_PARAM_LENGTH - 21)])
-        (status, output, _) = runner.run({"action_input": large_value})
+        status, output, _ = runner.run({"action_input": large_value})
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
         self.assertEqual(output["result"]["action_input"], large_value)
@@ -903,7 +902,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {"content_version": "v0.2.0"}
         runner.pre_run()
 
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertEqual(output["result"], "v0.2.0")
@@ -915,7 +914,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {"content_version": "v0.3.0"}
         runner.pre_run()
 
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertEqual(output["result"], "v0.3.0")
@@ -953,7 +952,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {"content_version": "v0.3.0"}
         runner.entry_point = PRINT_VERSION_ACTION
         runner.pre_run()
-        (_, _, _) = runner.run({"row_index": 4})
+        _, _, _ = runner.run({"row_index": 4})
 
         _, call_kwargs = mock_popen.call_args
         actual_env = call_kwargs["env"]
@@ -973,7 +972,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner.runner_parameters = {"content_version": "v0.2.0"}
         runner.pre_run()
 
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertEqual(output["result"], "v0.2.0")
@@ -1051,7 +1050,7 @@ fatal: invalid reference: vinvalid
         runner = self._get_mock_runner_obj()
         runner.entry_point = PRINT_CONFIG_ITEM_ACTION
         runner.pre_run()
-        (status, output, _) = runner.run({})
+        status, output, _ = runner.run({})
 
         self.assertEqual(status, LIVEACTION_STATUS_FAILED)
         self.assertIsNotNone(output)

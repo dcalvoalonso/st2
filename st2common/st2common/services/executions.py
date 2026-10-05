@@ -51,7 +51,6 @@ from st2common.metrics.base import Timer
 from st2common.services import coordination
 from six.moves import range
 
-
 __all__ = [
     "create_execution_object",
     "update_execution",

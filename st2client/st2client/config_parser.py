@@ -29,7 +29,6 @@ import io
 import six
 from six.moves.configparser import ConfigParser
 
-
 __all__ = [
     "CLIConfigParser",
     "ST2_CONFIG_DIRECTORY",

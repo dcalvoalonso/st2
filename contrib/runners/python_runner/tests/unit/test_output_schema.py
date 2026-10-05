@@ -30,7 +30,6 @@ from st2tests.base import CleanDbTestCase
 from st2tests.fixturesloader import assert_submodules_are_checked_out
 import st2tests.base as tests_base
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PASCAL_ROW_ACTION_PATH = os.path.join(
@@ -71,7 +70,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 5})
+        status, output, _ = runner.run({"row_index": 5})
         output_schema._validate_runner(config[0]["output_schema"], output)
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(output)
@@ -81,7 +80,7 @@ class PythonRunnerTestCase(RunnerTestCase, CleanDbTestCase):
         runner = self._get_mock_runner_obj()
         runner.entry_point = PASCAL_ROW_ACTION_PATH
         runner.pre_run()
-        (status, output, _) = runner.run({"row_index": 5})
+        status, output, _ = runner.run({"row_index": 5})
         with self.assertRaises(jsonschema.ValidationError):
             output_schema._validate_runner(FAIL_OUTPUT_SCHEMA, output)
 

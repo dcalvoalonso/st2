@@ -22,7 +22,6 @@ from st2tests.base import RunnerTestCase
 import st2tests.config as tests_config
 from announcement_runner import announcement_runner
 
-
 mock_dispatcher = mock.Mock()
 
 
@@ -48,7 +47,7 @@ class AnnouncementRunnerTestCase(RunnerTestCase):
         runner.liveaction = mock.Mock(context={})
 
         runner.pre_run()
-        (status, result, _) = runner.run({"test": "passed"})
+        status, result, _ = runner.run({"test": "passed"})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(result)
@@ -75,7 +74,7 @@ class AnnouncementRunnerTestCase(RunnerTestCase):
         )
 
         runner.pre_run()
-        (status, result, _) = runner.run({"test": "passed"})
+        status, result, _ = runner.run({"test": "passed"})
 
         self.assertEqual(status, LIVEACTION_STATUS_SUCCEEDED)
         self.assertIsNotNone(result)

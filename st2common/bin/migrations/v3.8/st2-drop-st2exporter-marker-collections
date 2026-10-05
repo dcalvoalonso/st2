@@ -30,7 +30,6 @@ from st2common import config
 from st2common.service_setup import db_setup
 from st2common.service_setup import db_teardown
 
-
 MARKER_COLLECTION = "marker_d_b"
 DUMPER_MARKER_COLLECTION = "dumper_marker_d_b"
 

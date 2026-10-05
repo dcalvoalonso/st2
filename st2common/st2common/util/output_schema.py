@@ -24,7 +24,6 @@ from st2common.util import schema
 from st2common.constants import action as action_constants
 from st2common.constants.secrets import MASKED_ATTRIBUTE_VALUE
 
-
 LOG = logging.getLogger(__name__)
 
 _JSON_BASIC_TYPES = {"boolean", "integer", "null", "number", "string"}

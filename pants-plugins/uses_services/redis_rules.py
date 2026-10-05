@@ -162,29 +162,23 @@ async def redis_is_running(
             service_start_cmd_el_7="service redis start",
             service_start_cmd_el="systemctl start redis",
             not_installed_clause_el="this is one way to install it:",
-            install_instructions_el=dedent(
-                """\
+            install_instructions_el=dedent("""\
                 sudo yum -y install redis
                 # Don't forget to start redis.
-                """
-            ),
+                """),
             service_start_cmd_deb="systemctl start redis",
             not_installed_clause_deb="this is one way to install it:",
-            install_instructions_deb=dedent(
-                """\
+            install_instructions_deb=dedent("""\
                 sudo apt-get install -y redis
                 # Don't forget to start redis.
-                """
-            ),
+                """),
             service_start_cmd_generic="systemctl start redis",
-            env_vars_hint=dedent(
-                """\
+            env_vars_hint=dedent("""\
                 You can also export the ST2TESTS_REDIS_HOST and ST2TESTS_REDIS_PORT
                 env vars to automatically use any redis host, local or remote,
                 while running unit and integration tests. Tests do not use any
                 ST2_COORDINATION__* vars at this point.
-                """
-            ),
+                """),
         ),
     )
 

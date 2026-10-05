@@ -30,7 +30,6 @@ from st2common.bootstrap import runnersregistrar as runners_registrar
 from st2tests.fixtures.generic.fixture import PACK_NAME as PACK
 from st2tests.fixturesloader import FixturesLoader
 
-
 __all__ = ["SchedulerPoliciesTestCase", "NotifierPoliciesTestCase"]
 
 

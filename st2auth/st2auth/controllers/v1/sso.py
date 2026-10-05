@@ -26,7 +26,6 @@ from st2common.exceptions import auth as auth_exc
 from st2common import log as logging
 from st2common import router
 
-
 LOG = logging.getLogger(__name__)
 SSO_BACKEND = st2auth_sso.get_sso_backend()
 

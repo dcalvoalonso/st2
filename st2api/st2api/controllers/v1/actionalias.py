@@ -29,7 +29,6 @@ from st2common.router import Response
 from st2common.util.actionalias_matching import get_matching_alias
 from st2common.util.actionalias_helpstring import generate_helpstring_result
 
-
 http_client = six.moves.http_client
 
 LOG = logging.getLogger(__name__)
@@ -112,7 +111,7 @@ class ActionAliasController(resource.ContentPackResourceController):
             return generate_helpstring_result(
                 aliases, filter, pack, int(limit), int(offset)
             )
-        except (TypeError) as e:
+        except TypeError as e:
             LOG.exception(
                 "Helpstring request contains an invalid data type: %s.",
                 six.text_type(e),

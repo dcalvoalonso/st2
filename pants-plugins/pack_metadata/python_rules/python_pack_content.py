@@ -47,7 +47,6 @@ from pack_metadata.target_types import (
     PackMetadataSourcesField,
 )
 
-
 # Implementation Notes:
 #
 # With pants, we can rely on dependency inference for all the

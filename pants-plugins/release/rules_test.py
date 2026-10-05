@@ -57,8 +57,7 @@ def rule_runner() -> RuleRunner:
     )
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -70,8 +69,7 @@ def rule_runner() -> RuleRunner:
                         },
                     },
                 )
-                """
-            ),
+                """),
             "runners/foobar_runner/foobar_runner/BUILD": "python_sources()",
             "runners/foobar_runner/foobar_runner/__init__.py": "",
             "runners/foobar_runner/foobar_runner/foobar_runner.py": "",
@@ -97,16 +95,14 @@ def gen_setup_kwargs(address: Address, rule_runner: RuleRunner) -> SetupKwargs:
 def test_setup_kwargs_plugin_no_description_kwarg(rule_runner: RuleRunner) -> None:
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
                     ),
                     dependencies=["./foobar_runner"],
                 )
-                """
-            ),
+                """),
         },
     )
 
@@ -121,8 +117,7 @@ def test_setup_kwargs_plugin_no_description_kwarg(rule_runner: RuleRunner) -> No
 def test_setup_kwargs_plugin_no_version_file_kwarg(rule_runner: RuleRunner) -> None:
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -130,8 +125,7 @@ def test_setup_kwargs_plugin_no_version_file_kwarg(rule_runner: RuleRunner) -> N
                     ),
                     dependencies=["./foobar_runner"],
                 )
-                """
-            ),
+                """),
         },
     )
 
@@ -146,8 +140,7 @@ def test_setup_kwargs_plugin_no_version_file_kwarg(rule_runner: RuleRunner) -> N
 def test_setup_kwargs_plugin_no_version_file(rule_runner: RuleRunner) -> None:
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -156,8 +149,7 @@ def test_setup_kwargs_plugin_no_version_file(rule_runner: RuleRunner) -> None:
                     ),
                     dependencies=["./foobar_runner"],
                 )
-                """
-            ),
+                """),
         },
     )
 
@@ -174,8 +166,7 @@ def test_setup_kwargs_plugin_no_version_file(rule_runner: RuleRunner) -> None:
 def test_setup_kwargs_plugin_no_version(rule_runner: RuleRunner) -> None:
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -183,8 +174,7 @@ def test_setup_kwargs_plugin_no_version(rule_runner: RuleRunner) -> None:
                         version_file="foobar_runner/__init__.py",
                     ),
                 )
-                """
-            ),
+                """),
             "runners/foobar_runner/foobar_runner/__init__.py": "contents do not have version",
         },
     )
@@ -200,8 +190,7 @@ def test_setup_kwargs_plugin_no_version(rule_runner: RuleRunner) -> None:
 def test_setup_kwargs_plugin_conflicting_kwargs(rule_runner: RuleRunner) -> None:
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -215,8 +204,7 @@ def test_setup_kwargs_plugin_conflicting_kwargs(rule_runner: RuleRunner) -> None
                         long_description="conflict",
                     ),
                 )
-                """
-            ),
+                """),
             "runners/foobar_runner/foobar_runner/__init__.py": '__version__ = "0.0test0"',
             "runners/foobar_runner/README.rst": "lorem ipsum",
         },
@@ -244,8 +232,7 @@ def test_setup_kwargs_plugin(rule_runner: RuleRunner) -> None:
 
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -262,8 +249,7 @@ def test_setup_kwargs_plugin(rule_runner: RuleRunner) -> None:
                         },
                     },
                 )
-                """
-            ),
+                """),
             "runners/foobar_runner/foobar_runner/__init__.py": '__version__ = "0.0test0"',
         },
     )
@@ -299,8 +285,7 @@ def test_setup_kwargs_plugin_with_readme(rule_runner: RuleRunner) -> None:
 
     rule_runner.write_files(
         {
-            "runners/foobar_runner/BUILD": dedent(
-                """\
+            "runners/foobar_runner/BUILD": dedent("""\
                 python_distribution(
                     provides=python_artifact(
                         name="stackstorm-runner-foobar",
@@ -317,8 +302,7 @@ def test_setup_kwargs_plugin_with_readme(rule_runner: RuleRunner) -> None:
                         },
                     },
                 )
-                """
-            ),
+                """),
             "runners/foobar_runner/foobar_runner/__init__.py": '__version__ = "0.0test0"',
             "runners/foobar_runner/README.rst": "lorem ipsum",
         },

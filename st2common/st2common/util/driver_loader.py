@@ -20,7 +20,6 @@ stevedore dynamic plugin loading.
 
 from st2common import log as logging
 
-
 __all__ = ["get_available_backends", "get_backend_driver", "get_backend_instance"]
 
 LOG = logging.getLogger(__name__)

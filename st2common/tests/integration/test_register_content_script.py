@@ -31,7 +31,6 @@ from st2tests.fixtures.packs.dummy_pack_4.fixture import PACK_PATH as DUMMY_PACK
 from st2tests.fixtures.packs.runners.fixture import FIXTURE_PATH as RUNNER_DIRS
 from st2tests.fixtures.packs_1.dummy_pack_4.fixture import PACK_PATH as EMPTY_PACK_PATH
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SCRIPT_PATH = os.path.join(BASE_DIR, "../../bin/st2-register-content")
 SCRIPT_PATH = os.path.abspath(SCRIPT_PATH)

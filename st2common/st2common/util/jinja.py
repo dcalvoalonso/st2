@@ -24,7 +24,6 @@ from st2common.util.compat import to_unicode
 from st2common.util.jsonify import json_encode
 from st2common.util.jsonify import json_decode
 
-
 __all__ = ["get_jinja_environment", "render_values", "is_jinja_expression"]
 
 

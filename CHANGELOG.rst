@@ -14,10 +14,10 @@ in development
 This release is tested with and supports the following Python versions and 3rd party dependencies.
 
 ```
-Python      3.10, 3.11 and 3.12
+Python      3.11 and 3.12
 MongoDB     8.2
 RabbitMQ    4.2
-Redis       8.6
+Redis       8.10
 ```
 
 
@@ -30,6 +30,7 @@ Fixed
 Changed
 ~~~~~~~
  * Removed Python 3.8 and 3.9 from testing and CI/CD.
+ * Removed Python 3.10 (end of life in October 2026); StackStorm now requires Python 3.11 or 3.12.
  * Removed mongodb 7.0, rabbitmq 3.13 and redis 8.0
  * Replaced deprecated `pkg_resources` module with `importlib-metadata` and `importlib-resources`.
  * Replaced abandoned `flex` module by `openapi-spec-validator`

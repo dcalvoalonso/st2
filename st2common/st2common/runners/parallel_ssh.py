@@ -31,7 +31,6 @@ from st2common.util import concurrency as concurrency_lib
 from st2common.util.jsonify import json_encode
 from st2common.util.jsonify import json_loads
 
-
 LOG = logging.getLogger(__name__)
 
 
@@ -253,7 +252,7 @@ class ParallelSSHClient(object):
         return results
 
     def _connect(self, host, results, raise_on_any_error=False):
-        (hostname, port) = self._get_host_port_info(host)
+        hostname, port = self._get_host_port_info(host)
 
         extra = {"host": host, "port": port, "user": self._ssh_user}
         if self._ssh_password:
@@ -305,7 +304,7 @@ class ParallelSSHClient(object):
         try:
             LOG.debug("Running command: %s on host: %s.", cmd, host)
             client = self._hosts_client[host]
-            (stdout, stderr, exit_code) = client.run(
+            stdout, stderr, exit_code = client.run(
                 cmd, timeout=timeout, call_line_handler_func=True
             )
 
@@ -370,7 +369,7 @@ class ParallelSSHClient(object):
             results[host] = self._generate_error_result(exc=ex, message=error)
 
     def _get_host_port_info(self, host_str):
-        (hostname, port) = ip_utils.split_host_port(host_str)
+        hostname, port = ip_utils.split_host_port(host_str)
         if not port:
             port = self._ssh_port
 

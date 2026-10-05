@@ -27,7 +27,6 @@ from st2client import models
 from st2client.utils import httpclient
 from tests import base as st2cli_tests
 
-
 LOG = logging.getLogger(__name__)
 
 MOCK_ACTION = {

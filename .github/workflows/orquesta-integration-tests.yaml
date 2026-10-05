@@ -55,9 +55,8 @@ jobs:
         # NOTE: We need to use full Python version as part of Python deps cache key otherwise
         # setup virtualenv step will fail.
         python:
-          - {version-short: '3.10', version: '3.10.16'}
-          - {version-short: '3.11', version: '3.11.11'}
-          - {version-short: '3.12', version: '3.12.12'}
+          - {version-short: '3.11', version: '3.11.17'}
+          - {version-short: '3.12', version: '3.12.15'}
         make:
           - name: 'Integration Tests (Orquesta)'
             task: 'ci-orquesta'
@@ -79,7 +78,7 @@ jobs:
 
       redis:
         # Docker Hub image
-        image: redis:8.6
+        image: redis:8.10
         # Set health checks to wait until redis has started
         options: >-
           --name "redis"

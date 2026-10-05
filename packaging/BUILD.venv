@@ -67,7 +67,6 @@ pex_binary(
     include_sources=False,  # already includes our wheels, skipping wheel-owned sources
     venv_hermetic_scripts=False,  # do not add -sE to script shebangs
     # 1 parametrize group per python minor version in [DEFAULT].st2_interpreter_constraints in pants.toml
-    **_pex_py3("10"),
     **_pex_py3("11"),
 )
 
@@ -88,6 +87,5 @@ nfpm_content_file(
     file_owner="root",
     file_group="root",
     file_mode="rwxr-x---",
-    **_venv_py3("10"),
     **_venv_py3("11"),
 )

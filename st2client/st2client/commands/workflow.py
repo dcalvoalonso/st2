@@ -22,7 +22,6 @@ import yaml
 from st2client import commands
 from st2client.commands.resource import add_auth_token_to_kwargs_from_cli
 
-
 LOG = logging.getLogger(__name__)
 
 

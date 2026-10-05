@@ -17,7 +17,6 @@
 Mongoengine is licensed under MIT.
 """
 
-
 import enum
 from oslo_config import cfg
 import zstandard

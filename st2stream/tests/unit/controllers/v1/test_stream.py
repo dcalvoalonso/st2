@@ -32,7 +32,6 @@ from st2tests.api import SUPER_SECRET_PARAMETER
 
 from .base import FunctionalTest
 
-
 RUNNER_TYPE_1 = {
     "description": "",
     "enabled": True,

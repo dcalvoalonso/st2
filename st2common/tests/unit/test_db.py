@@ -50,7 +50,6 @@ from st2tests import DbTestCase
 from unittest import TestCase
 from st2tests.base import ALL_MODELS
 
-
 __all__ = [
     "DbConnectionTestCase",
     "DbConnectionTestCase",
@@ -830,7 +829,6 @@ from st2common.models.db.runner import RunnerTypeDB
 from st2common.models.db.notification import NotificationSchema, NotificationSubSchema
 from st2common.persistence.action import Action
 from st2common.persistence.runner import RunnerType
-
 
 PARAM_SCHEMA = {
     "title": "action-1",

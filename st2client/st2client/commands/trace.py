@@ -24,7 +24,6 @@ from st2client.formatters import execution as execution_formatter
 from st2client.commands import resource
 from st2client.utils.date import format_isodate_for_user_timezone
 
-
 TRACE_ATTRIBUTE_DISPLAY_ORDER = [
     "id",
     "trace_tag",
@@ -74,9 +73,11 @@ class TraceBranch(resource.ResourceBranch):
 class SingleTraceDisplayMixin(object):
     def print_trace_details(self, trace, args, **kwargs):
         options = {
-            "attributes": TRACE_ATTRIBUTE_DISPLAY_ORDER
-            if args.json
-            else TRACE_HEADER_DISPLAY_ORDER
+            "attributes": (
+                TRACE_ATTRIBUTE_DISPLAY_ORDER
+                if args.json
+                else TRACE_HEADER_DISPLAY_ORDER
+            )
         }
         options["json"] = args.json
         options["yaml"] = args.yaml
@@ -174,11 +175,8 @@ class TraceListCommand(resource.ResourceCommand, SingleTraceDisplayMixin):
             type=int,
             dest="last",
             default=self.default_limit,
-            help=(
-                "List N most recent %s. Use -n -1 to fetch the full result \
-                                       set."
-                % self.resource_name
-            ),
+            help=("List N most recent %s. Use -n -1 to fetch the full result \
+                                       set." % self.resource_name),
         )
         self.parser.add_argument(
             "-s",

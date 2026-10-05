@@ -115,7 +115,7 @@ class ActionExecutionOutputStreamController(ResourceController):
                     if not pack:
                         continue
                     else:
-                        (_, model_api) = pack
+                        _, model_api = pack
 
                         # Note: gunicorn wsgi handler expect bytes, not unicode
                         # pylint: disable=no-member

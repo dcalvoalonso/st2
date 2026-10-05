@@ -47,8 +47,7 @@ def test_infer_packs_globs_dependencies() -> None:
     )
     rule_runner.write_files(
         {
-            "packs/BUILD": dedent(
-                """\
+            "packs/BUILD": dedent("""\
                 python_sources(
                     name="git_submodule",
                     sources=["./git_submodule/*.py"],
@@ -61,18 +60,15 @@ def test_infer_packs_globs_dependencies() -> None:
                         "./a",         # explicit include
                     ],
                 )
-                """
-            ),
+                """),
             "packs/a/BUILD": "python_sources()",
             "packs/a/__init__.py": "",
             "packs/a/fixture.py": "",
-            "packs/b/BUILD": dedent(
-                """\
+            "packs/b/BUILD": dedent("""\
                 python_sources(
                     dependencies=["packs/configs/b.yaml"],
                 )
-                """
-            ),
+                """),
             "packs/b/__init__.py": "",
             "packs/b/fixture.py": "",
             "packs/c/BUILD": "python_sources()",
@@ -84,19 +80,15 @@ def test_infer_packs_globs_dependencies() -> None:
             # imitate a pack in a git submodule (should NOT have a BUILD file)
             "packs/git_submodule/__init__.py": "",
             "packs/git_submodule/fixture.py": "",
-            "packs/configs/BUILD": dedent(
-                """\
+            "packs/configs/BUILD": dedent("""\
                 resources(
                     sources=["*.yaml"],
                 )
-                """
-            ),
-            "packs/configs/b.yaml": dedent(
-                """\
+                """),
+            "packs/configs/b.yaml": dedent("""\
                 ---
                 # pack config for pack b
-                """
-            ),
+                """),
         }
     )
 

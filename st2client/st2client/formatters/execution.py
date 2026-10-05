@@ -44,7 +44,6 @@ from st2client.utils.color import DisplayColors
 from st2client.utils import schema
 import six
 
-
 LOG = logging.getLogger(__name__)
 
 PLATFORM_MAXINT = 2 ** (struct.Struct("i").size * 8 - 1) - 1

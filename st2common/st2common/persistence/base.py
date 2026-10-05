@@ -29,7 +29,6 @@ from st2common.exceptions.db import (
 )
 from st2common.models.system.common import ResourceReference
 
-
 __all__ = ["Access", "ContentPackResource", "StatusBasedResource"]
 
 LOG = logging.getLogger(__name__)

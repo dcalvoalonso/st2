@@ -31,7 +31,6 @@ import st2tests.config as tests_config
 from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 from st2actions.scheduler.handler import ActionExecutionSchedulingQueueHandler
 
-
 TEST_FIXTURES = {"runners": ["run-local.yaml"], "actions": ["local.yaml"]}
 
 

@@ -17,7 +17,6 @@ from __future__ import absolute_import
 import re
 from st2common.util.actionalias_matching import normalise_alias_format_string
 
-
 __all__ = ["generate_helpstring_result"]
 
 

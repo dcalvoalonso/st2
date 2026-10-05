@@ -24,7 +24,6 @@ import unittest
 
 from st2client import models
 
-
 LOG = logging.getLogger(__name__)
 
 FAKE_ENDPOINT = "http://127.0.0.1:8268"

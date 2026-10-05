@@ -13,7 +13,6 @@
 # limitations under the License.
 from pants.engine.target import StringSequenceField
 
-
 supported_services = ("mongo", "rabbitmq", "redis", "st2cluster", "system_user")
 
 

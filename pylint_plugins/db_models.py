@@ -16,6 +16,7 @@
 """
 Plugin which tells Pylint how to handle mongoengine document classes.
 """
+
 # pylint: disable=E1120,E1125
 
 import astroid

@@ -34,7 +34,6 @@ from st2client.utils.httpclient import (
     add_json_content_type_to_headers,
 )
 
-
 LOG = logging.getLogger(__name__)
 
 if six.PY3:

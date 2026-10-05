@@ -22,7 +22,6 @@ from st2common.constants import system as sys_constants
 from st2common.constants.system import DEFAULT_CONFIG_FILE_PATH
 from st2common import log as logging
 
-
 LOG = logging.getLogger(__name__)
 
 

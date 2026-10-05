@@ -26,7 +26,6 @@ from st2common.metrics.utils import check_key
 from st2common.metrics.utils import get_full_key_name
 from st2common.util.misc import ignore_and_log_exception
 
-
 LOG = logging.getLogger(__name__)
 
 # Which exceptions thrown by statsd library should be considered as non-fatal

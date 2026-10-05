@@ -20,7 +20,6 @@ import logging
 from st2client.models.policy import Policy, PolicyType
 from st2client.commands import resource
 
-
 LOG = logging.getLogger(__name__)
 
 

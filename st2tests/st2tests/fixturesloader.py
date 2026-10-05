@@ -64,7 +64,6 @@ from st2common.persistence.sensor import SensorType
 from st2common.persistence.trace import Trace
 from st2common.persistence.trigger import Trigger, TriggerType, TriggerInstance
 
-
 ALLOWED_DB_FIXTURES = [
     "actions",
     "actionstates",
@@ -152,9 +151,7 @@ GIT_SUBMODULES_NOT_CHECKED_OUT_ERROR = """
 Git submodule "%s" is not checked out. Make sure to run "git submodule update --init
  --recursive" in the repository root directory to check out all the
 submodules.
-""".replace(
-    "\n", ""
-).strip()
+""".replace("\n", "").strip()
 
 
 def get_fixtures_base_path():

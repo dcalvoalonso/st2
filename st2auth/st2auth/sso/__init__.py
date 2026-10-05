@@ -24,7 +24,6 @@ from st2common import log as logging
 
 from st2common.util import driver_loader
 
-
 __all__ = ["get_available_backends", "get_backend_instance", "get_sso_backend"]
 
 LOG = logging.getLogger(__name__)

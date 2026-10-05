@@ -94,7 +94,7 @@ class BufferedDispatcher(object):
         while not self._work_buffer.empty() and concurrency.is_green_pool_free(
             self._dispatcher_pool
         ):
-            (handler, args) = self._work_buffer.get_nowait()
+            handler, args = self._work_buffer.get_nowait()
             concurrency.pool_spawn(self._dispatcher_pool, handler, *args)
 
     def __repr__(self):

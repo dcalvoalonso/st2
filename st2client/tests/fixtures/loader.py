@@ -24,7 +24,6 @@ import os
 import six
 import yaml
 
-
 ALLOWED_EXTS = [".json", ".yaml", ".yml", ".txt"]
 PARSER_FUNCS = {".json": json.load, ".yml": yaml.safe_load, ".yaml": yaml.safe_load}
 

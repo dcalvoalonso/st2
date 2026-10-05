@@ -25,7 +25,6 @@ from st2common import router
 from st2common.services import workflows as workflow_service
 from st2common.util import api as api_utils
 
-
 LOG = logging.getLogger(__name__)
 
 

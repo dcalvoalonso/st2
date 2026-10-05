@@ -45,7 +45,6 @@ from st2tests.fixtures.packs.dummy_pack_7.fixture import (
 from st2tests.fixtures.packs.orquesta_tests.fixture import PACK_PATH as TEST_PACK_PATH
 from st2tests.mocks import liveaction as mock_lv_ac_xport
 
-
 PACKS = [TEST_PACK_PATH, PACK_7_PATH, CORE_PACK_PATH]
 
 

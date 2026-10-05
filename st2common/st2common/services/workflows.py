@@ -52,7 +52,6 @@ from st2common.util import action_db as action_utils
 from st2common.util import date as date_utils
 from st2common.util import param as param_utils
 
-
 LOG = logging.getLogger(__name__)
 
 LOG_FUNCTIONS = {

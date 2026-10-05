@@ -23,7 +23,6 @@ from st2common.util import concurrency
 from st2actions.workflows import workflows
 from st2common.models.db import workflow as wf_ex_db
 
-
 __all__ = ["MockWorkflowExecutionPublisher"]
 
 

@@ -34,7 +34,6 @@ from st2common.service_setup import deregister_service
 from st2reactor.timer import config
 from st2reactor.timer.base import St2Timer
 
-
 LOGGER_NAME = get_logger_name_for_module(sys.modules[__name__])
 LOG = logging.getLogger(LOGGER_NAME)
 TIMER_ENGINE = "timer_engine"

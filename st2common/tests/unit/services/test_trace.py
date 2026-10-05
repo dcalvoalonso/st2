@@ -30,7 +30,6 @@ from st2tests.fixtures.traces.fixture import PACK_NAME as FIXTURES_PACK
 from st2tests.fixturesloader import FixturesLoader
 from st2tests import DbTestCase
 
-
 TEST_MODELS = OrderedDict(
     (
         (

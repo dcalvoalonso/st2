@@ -53,7 +53,6 @@ from .packagecloud_rules import (
 from .packagecloud_rules import rules as packagecloud_rules
 from .target_types import DistroIDField
 
-
 REQUIRED_KWARGS = (
     "description",
     # TODO: source the version from one place for the whole repo.

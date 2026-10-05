@@ -40,7 +40,6 @@ from st2common.fields import JSONDictEscapedFieldCompatibilityField
 
 from st2tests import DbTestCase
 
-
 MOCK_DATA_DICT = {
     "key1": "one",
     "key2": 2,

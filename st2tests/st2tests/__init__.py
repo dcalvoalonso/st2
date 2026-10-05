@@ -22,7 +22,6 @@ from st2tests.base import ExecutionDbTestCase
 from st2tests.base import DbModelTestCase
 from st2tests.base import WorkflowTestCase
 
-
 __all__ = [
     "GreenThreadTestCase",
     "EventletTestCase",

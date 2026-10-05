@@ -29,7 +29,6 @@ from st2common.metrics.base import CounterWithTimer
 from st2common.metrics.base import Timer
 from st2common.metrics.base import get_driver
 
-
 LOG = logging.getLogger(__name__)
 
 

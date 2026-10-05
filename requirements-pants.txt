@@ -43,7 +43,8 @@ orquesta @ git+https://github.com/StackStorm/orquesta.git
 # Historical reference: https://github.com/StackStorm/st2/issues/4160#issuecomment-394386433
 # Relaxed pinning for py3.10 support.
 oslo.config
-paramiko<4.0.0
+# paramiko 4.0 removed DSA (DSS) key support; 5.0 removed SHA-1 algorithms.
+paramiko>=5.0.0,<6.0.0
 # we use pip at runtime
 pip
 # prance is used by st2-validate-api-spec to validate the openapi spec
@@ -74,7 +75,7 @@ routes
 semver
 # setuptools provides pkg_resources (and we need it with pip at runtime)
 # setuptools is also required for pants to build wheels.
-setuptools==82.0.1
+setuptools==84.0.0
 simplejson
 six
 # NOTE: we use sseclient-py instead of sseclient because sseclient
@@ -92,7 +93,7 @@ tooz
 udatetime
 ujson
 # Pin virtualenv to match version installed by st2packaging-dockerfiles
-virtualenv==21.5.1
+virtualenv==21.7.13
 webob
 webtest
 # we use pip+wheel at runtime; wheel is also required for pants to build wheels.

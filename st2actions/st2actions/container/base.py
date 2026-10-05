@@ -129,7 +129,7 @@ class RunnerContainer(object):
 
             with CounterWithTimer(key="action.executions"):
                 with CounterWithTimer(key="action.%s.executions" % (runner.action.ref)):
-                    (status, result, context) = runner.run(action_params)
+                    status, result, context = runner.run(action_params)
                     result = jsonify.try_loads(result)
 
             action_completed = status in action_constants.LIVEACTION_COMPLETED_STATES
@@ -183,7 +183,7 @@ class RunnerContainer(object):
             LOG.debug(
                 "Performing cancel for runner: %s", (runner.runner_id), extra=extra
             )
-            (status, result, context) = runner.cancel()
+            status, result, context = runner.cancel()
 
             # Update the final status of liveaction and corresponding action execution.
             # The status is updated here because we want to keep the workflow running
@@ -220,7 +220,7 @@ class RunnerContainer(object):
             LOG.debug(
                 "Performing pause for runner: %s", (runner.runner_id), extra=extra
             )
-            (status, result, context) = runner.pause()
+            status, result, context = runner.pause()
         except:
             _, ex, tb = sys.exc_info()
             # include the error message and traceback to try and provide some hints.
@@ -252,7 +252,7 @@ class RunnerContainer(object):
             LOG.debug(
                 "Performing resume for runner: %s", (runner.runner_id), extra=extra
             )
-            (status, result, context) = runner.resume()
+            status, result, context = runner.resume()
             result = jsonify.try_loads(result)
             action_completed = status in action_constants.LIVEACTION_COMPLETED_STATES
 

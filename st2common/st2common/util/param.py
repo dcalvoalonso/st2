@@ -40,7 +40,6 @@ from st2common.util import jinja as jinja_utils
 from st2common.util.jsonify import json_encode
 from st2common.util.jsonify import json_decode
 
-
 LOG = logging.getLogger(__name__)
 ENV = jinja_utils.get_jinja_environment()
 

@@ -26,7 +26,6 @@ from six.moves import StringIO
 from st2client.utils import interactive
 import six
 
-
 LOG = logging.getLogger(__name__)
 
 

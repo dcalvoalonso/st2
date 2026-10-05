@@ -29,7 +29,6 @@ import six
 import bson
 import orjson
 
-
 __all__ = [
     "json_encode",
     "json_decode",

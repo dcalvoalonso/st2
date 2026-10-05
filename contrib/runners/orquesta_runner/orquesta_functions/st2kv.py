@@ -23,7 +23,6 @@ from st2common.exceptions import db as db_exc
 from st2common.persistence import auth as auth_db_access
 from st2common.util import keyvalue as kvp_util
 
-
 LOG = logging.getLogger(__name__)
 
 

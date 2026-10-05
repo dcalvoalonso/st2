@@ -28,7 +28,6 @@ from st2common.router import exc, Response, NotFoundException
 from st2common.util.debugging import is_enabled as is_debugging_enabled
 from st2common.util.jsonify import json_encode
 
-
 LOG = logging.getLogger(__name__)
 
 

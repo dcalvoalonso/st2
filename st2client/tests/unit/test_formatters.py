@@ -37,7 +37,6 @@ from st2client.utils import jsutil
 from st2client.utils import httpclient
 from st2client.utils import color
 
-
 LOG = logging.getLogger(__name__)
 
 FIXTURES_MANIFEST = {

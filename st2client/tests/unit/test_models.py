@@ -24,7 +24,6 @@ from tests import base
 from st2client import models
 from st2client.utils import httpclient
 
-
 LOG = logging.getLogger(__name__)
 
 

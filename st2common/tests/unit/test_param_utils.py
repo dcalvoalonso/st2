@@ -41,7 +41,6 @@ from st2tests import DbTestCase
 from st2tests.fixtures.generic.fixture import PACK_NAME as FIXTURES_PACK
 from st2tests.fixturesloader import FixturesLoader
 
-
 TEST_MODELS = {
     "actions": ["action_4_action_context_param.yaml", "action_system_default.yaml"],
     "runners": ["testrunner1.yaml"],

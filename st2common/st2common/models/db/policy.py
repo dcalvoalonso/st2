@@ -22,7 +22,6 @@ from st2common.models.db import stormbase
 from st2common.models.system import common as common_models
 from st2common.constants.types import ResourceType
 
-
 __all__ = ["PolicyTypeReference", "PolicyTypeDB", "PolicyDB"]
 
 LOG = logging.getLogger(__name__)

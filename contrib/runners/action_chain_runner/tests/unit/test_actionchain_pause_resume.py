@@ -46,7 +46,6 @@ from st2tests.fixtures.packs.core.fixture import PACK_PATH as CORE_PACK_PATH
 from st2tests.mocks.liveaction import MockLiveActionPublisherNonBlocking
 from six.moves import range
 
-
 TEST_FIXTURES = {
     "chains": [
         "test_pause_resume.yaml",

@@ -36,7 +36,6 @@ from st2common.constants.action import LIVEACTION_STATUSES
 from st2common.models.system.common import ResourceReference
 from st2common.fields import JSONDictEscapedFieldCompatibilityField
 
-
 __all__ = [
     "ActionAPI",
     "ActionCreateAPI",
@@ -454,9 +453,9 @@ class LiveActionAPI(BaseAPI):
         """
 
         for field_name, field_value in raw_values.items():
-            doc[
-                field_name
-            ] = JSONDictEscapedFieldCompatibilityField().parse_field_value(field_value)
+            doc[field_name] = (
+                JSONDictEscapedFieldCompatibilityField().parse_field_value(field_value)
+            )
         return doc
 
     @classmethod

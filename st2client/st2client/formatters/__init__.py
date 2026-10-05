@@ -20,7 +20,6 @@ import logging
 
 import six
 
-
 LOG = logging.getLogger(__name__)
 
 

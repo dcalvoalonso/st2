@@ -26,7 +26,6 @@ from st2common.util import date as date_utils
 from st2reactor.rules.filter import RuleFilter
 from st2tests import DbTestCase
 
-
 MOCK_TRIGGER = TriggerDB(
     pack="dummy_pack_1", name="trigger-test.name", type="system.test"
 )
